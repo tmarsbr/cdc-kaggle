@@ -1,7 +1,12 @@
 {
 
     "dataset_name" : "teocalvo/teomewhy-loyalty-system",
-    
+
+    "timer": {
+        "unit": "hours",
+        "value": 6
+    },
+
     "tables": [
         {
             "sep": ";",

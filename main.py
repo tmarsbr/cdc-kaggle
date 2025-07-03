@@ -1,9 +1,14 @@
 import datetime
+import json
 import os
 import shutil
-import json
+import time
 
+import dotenv
 import pandas as pd
+
+
+print(dotenv.load_dotenv(".env"))
 
 with open("config.json", "r") as f:
     CONFIG = json.load(f)
@@ -100,11 +105,26 @@ def move_from_actual_to_last():
 
     print("Arquivos movidos com sucesso!")
 
-if __name__ == "__main__":
+def main():
 
-    dataset_name = CONFIG["dataset_name"]
+    timer = CONFIG["timer"]["value"]
     
-    move_from_actual_to_last()
-    download_kaggle_dataset(dataset_name)
-    process_cdc(CONFIG["tables"])
+    if CONFIG["timer"]["unit"] == "minutes":
+        timer *= 60
+    elif CONFIG["timer"]["unit"] == "hours":
+        timer *= 3600
+    elif CONFIG["timer"]["unit"] == "days":
+        timer *= 86400
+
+    while True:
+        dataset_name = CONFIG["dataset_name"]
+        
+        move_from_actual_to_last()
+        download_kaggle_dataset(dataset_name)
+        process_cdc(CONFIG["tables"])
+
+        time.sleep(timer)
     
+
+if __name__ == "__main__":
+    main()
