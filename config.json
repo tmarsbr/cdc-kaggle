@@ -1,0 +1,31 @@
+{
+
+    "dataset_name" : "teocalvo/teomewhy-loyalty-system",
+    
+    "tables": [
+        {
+            "sep": ";",
+            "name": "clientes",
+            "date_field": "DtAtualizacao",
+            "pk": "IdCliente"
+        },
+        {
+            "sep": ";",
+            "name": "produtos",
+            "date_field": "DescProduto",
+            "pk": "IdProduto"
+        },
+        {
+            "sep": ";",
+            "name": "transacoes",
+            "date_field": "DtCriacao",
+            "pk": "IdTransacao"
+        },
+        {
+            "sep": ";",
+            "name": "transacao_produto",
+            "date_field": "VlProduto",
+            "pk": "IdTransacaoProduto"
+        }
+    ]
+}
