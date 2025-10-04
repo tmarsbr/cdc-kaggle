@@ -1,10 +1,20 @@
 {
-
-    "dataset_name" : "teocalvo/teomewhy-loyalty-system",
+    "dataset_name": "teocalvo/teomewhy-loyalty-system",
+    
+    "aws": {
+        "bucket": "meudatalake-raw",
+        "prefix": "upcell",
+        "region": "us-east-1"
+    },
 
     "timer": {
         "unit": "hours",
         "value": 6
+    },
+
+    "cleanup": {
+        "enabled": true,
+        "keep_last_n_cdc_files": 5
     },
 
     "tables": [
@@ -12,12 +22,12 @@
             "sep": ";",
             "name": "clientes",
             "date_field": "DtAtualizacao",
-            "pk": "IdCliente"
+            "pk": "idCliente"
         },
         {
             "sep": ";",
             "name": "produtos",
-            "date_field": "DescProduto",
+            "date_field": "",
             "pk": "IdProduto"
         },
         {
@@ -29,8 +39,8 @@
         {
             "sep": ";",
             "name": "transacao_produto",
-            "date_field": "VlProduto",
-            "pk": "IdTransacaoProduto"
+            "date_field": "vlProduto",
+            "pk": "idTransacaoProduto"
         }
     ]
 }

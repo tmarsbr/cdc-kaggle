@@ -1,2 +1,81 @@
-*.env
-*.csv
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables & Credentials
+.env
+.env.*
+.envrc
+*.pem
+*.key
+credentials.json
+config.json
+secrets.json
+
+# AWS Credentials
+.aws/
+aws_credentials.txt
+*aws_access_key*
+*aws_secret*
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Databricks
+.databricks/
+*.dbfs
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Git
+*.orig
+
+# Data files (opcional - descomentar se necessário)
+# *.csv
+# *.parquet
+# *.json
+# data/
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
