@@ -33,8 +33,8 @@ env/
 *.pem
 *.key
 credentials.json
-config.json
 secrets.json
+kaggle.json
 
 # AWS Credentials
 .aws/
@@ -65,17 +65,20 @@ desktop.ini
 # Logs
 *.log
 logs/
+cdc_pipeline.log
 
 # Git
 *.orig
 
-# Data files (opcional - descomentar se necessário)
-# *.csv
-# *.parquet
-# *.json
-# data/
+# Data files - Local cache and generated files
+data/actual/
+data/last/
+data/cdc/*.parquet
 
 # Temporary files
 *.tmp
 *.bak
 *.cache
+# Windows automation scripts (podem conter caminhos locais)
+start_pipeline.bat
+agendar_task.ps1
