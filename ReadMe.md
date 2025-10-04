@@ -204,9 +204,9 @@ s3://seu-bucket/prefix/
 
 ## 👨‍💻 Autor
 
-**Tiago Mendes**
+**Tiago Silva**
 - GitHub: [@TeoMeWhy](https://github.com/TeoMeWhy)
-- LinkedIn: [Tiago Mendes](https://linkedin.com/in/seu-perfil)
+- LinkedIn: [Tiago Silva](https://linkedin.com/in/tiagodados)
 - Kaggle: [@teocalvo](https://www.kaggle.com/teocalvo)
 
 ---
